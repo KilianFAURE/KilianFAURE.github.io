@@ -55,7 +55,7 @@
       <a class="scroll-cue" href="#parcours"><span class="scroll-line"></span> DÉFILER POUR EXPLORER</a>
     </section>
 
-    <section class="section-shell section-block" id="parcours">
+<section class="section-shell section-block" id="parcours">
       <div class="section-heading reveal"><p class="eyebrow">01 / MON PARCOURS</p><h2>Du terrain aux <span class="gradient-text">données.</span></h2><p>Une trajectoire construite autour de la performance industrielle, de la digitalisation et de l’analyse des données.</p></div>
       <div class="journey-layout">
         <aside class="map-panel" aria-label="Carte schématique du parcours géographique">
@@ -64,12 +64,17 @@
             <img class="map-background" src="assets/maps/france-europe-dark.png" alt="Carte stylisée de la France et de l’Europe occidentale" />
             <svg class="france-map" viewBox="0 0 1536 1024" role="img" aria-labelledby="map-title map-desc" preserveAspectRatio="xMidYMid meet">
               <title id="map-title">Carte du parcours professionnel</title>
-              <desc id="map-desc">Carte de la France et de l’Allemagne avec des repères à Clermont-Ferrand, Issoire et Singen.</desc>
-              <path class="map-route" d="M700 450 Q680 475 690 500" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
-              <path class="map-route route-to-germany" d="M700 450 Q900 320 1180 310" fill="none" stroke="#3276DB" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
-              <g class="map-marker" data-place="clermont" transform="translate(700 450)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="-18">CLERMONT-FERRAND</text></g>
-              <g class="map-marker" data-place="issoire" transform="translate(690 500)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="-20" y="32" text-anchor="end">ISSOIRE</text></g>
-              <g class="map-marker" data-place="singen" transform="translate(1180 310)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="-15">SINGEN</text><text x="20" y="10" class="map-country">ALLEMAGNE</text></g>
+              <desc id="map-desc">Carte de la France et de l'Allemagne avec des repères à Clermont-Ferrand, Rians, Saint-Étienne, Issoire et Singen.</desc>
+              <path class="map-route route-to-rians" d="M732 692 Q 695 580 690 470" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-saint-etienne" d="M690 470 Q 780 580 846 738" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-issoire" d="M846 738 Q 788 750 730 738" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-singen route-to-germany" d="M730 738 Q 1000 500 1320 400" fill="none" stroke="#3276DB" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-clermont" d="M1320 400 Q 1000 520 732 692" fill="none" stroke="#3276DB" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" opacity="0.75" />
+              <g class="map-marker" data-place="clermont" transform="translate(732 692)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="5">CLERMONT-FERRAND</text></g>
+              <g class="map-marker" data-place="rians" transform="translate(690 470)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="5">RIANS</text></g>
+              <g class="map-marker" data-place="saint-etienne" transform="translate(846 738)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="5">SAINT-ÉTIENNE</text></g>
+              <g class="map-marker" data-place="issoire" transform="translate(730 738)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="-20" y="32" text-anchor="end">ISSOIRE</text></g>
+              <g class="map-marker" data-place="singen" transform="translate(1320 400)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="-15">SINGEN</text><text x="20" y="10" class="map-country">ALLEMAGNE</text></g>
             </svg>
             <div class="avatar-placeholder" aria-label="Avatar illustré de Kilian Faure"><img class="avatar-image" src="assets/avatar/corps%20avatar.png" alt="Avatar illustré de Kilian Faure" hidden><img class="avatar-fallback" src="assets/avatar/tete%20avatar%20kilian.png" alt=""></div>
           </div>
@@ -94,7 +99,7 @@
               <p>Les enseignements couvraient notamment l'électricité industrielle, la lecture et la réalisation de schémas électriques, la mécanique et la résistance des matériaux, l'hydraulique et la pneumatique, la robotique, l'automatisme industriel et la maintenance des systèmes.</p>
               <div class="tag-list"><span>Électricité</span><span>Mécanique</span><span>Automatisme</span><span>Robotique</span><span>Maintenance</span></div>
             </article>
-            <article class="timeline-card" data-step="rians" data-place="clermont" aria-hidden="true" hidden>
+            <article class="timeline-card" data-step="rians" data-place="rians" aria-hidden="true" hidden>
               <div class="timeline-top"><span class="timeline-index">03 / 08</span><span class="timeline-date">2021 — 2022</span></div>
               <div class="timeline-company"><span class="company-symbol constellium-symbol">R</span><div><h3>Première expérience industrielle — Rians</h3><p>Technicien de maintenance en alternance · Secteur desserts</p></div></div>
               <p>Dans le cadre de ma deuxième année de DUT, j'ai intégré l'entreprise Rians sur son site de production de desserts, au sein de l'équipe maintenance du secteur dessert.</p>
@@ -102,7 +107,7 @@
               <p>Cette première immersion m'a fait découvrir la réalité des ateliers de production et l'importance de la maintenance dans la performance globale d'une usine. Elle a confirmé mon envie de poursuivre mes études vers des fonctions à plus forte responsabilité.</p>
               <div class="tag-list"><span>Maintenance préventive</span><span>Diagnostic de panne</span><span>Soudure MIG</span><span>Production</span></div>
             </article>
-            <article class="timeline-card" data-step="ingenieur" data-place="clermont" aria-hidden="true" hidden>
+            <article class="timeline-card" data-step="ingenieur" data-place="saint-etienne" aria-hidden="true" hidden>
               <div class="timeline-top"><span class="timeline-index">04 / 08</span><span class="timeline-date">2022 — 2025</span></div>
               <div class="timeline-company"><span class="company-symbol sigma-symbol">Σ</span><div><h3>Diplôme d'Ingénieur en Génie Industriel</h3><p>ISTP · École Nationale Supérieure des Mines de Saint-Étienne</p></div></div>
               <p>J'ai poursuivi mon parcours à l'ISTP dans le cadre du diplôme d'Ingénieur en Génie Industriel de l'École Nationale Supérieure des Mines de Saint-Étienne.</p>
