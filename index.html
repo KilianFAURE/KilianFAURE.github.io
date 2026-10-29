@@ -1,132 +1,199 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio | KILIAN</title>
-
-    <meta name="description"
-          content="Portfolio professionnel : génie industriel, data science et transformation digitale.">
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="description" content="Portfolio de Kilian Faure, ingénieur en génie industriel et diplômé d’un Mastère Spécialisé en science des données. Projets data, BI et transformation digitale industrielle.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kilian Faure — Génie industriel & Data Science">
+  <meta property="og:description" content="Projets data, BI et transformation digitale industrielle.">
+  <title>Kilian Faure — Génie industriel & Data Science</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/journey.js" defer></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Kilian Faure, accueil"><img class="brand-mark" src="assets/avatar/tete%20avatar%20kilian.png" alt=""><span>KILIAN FAURE<span class="brand-sub">PORTFOLIO / 2026</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+      <a href="#parcours">Parcours</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#contact" class="nav-contact">Me contacter <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-    <header class="navbar">
-        <a class="logo" href="#">KF<span>.</span></a>
+  <main id="contenu">
+    <section class="hero section-shell" id="accueil">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> DISPONIBLE POUR DE NOUVELLES OPPORTUNITÉS</p>
+        <h1>Faire le lien entre<br><span class="gradient-text">l’industrie & la data.</span></h1>
+        <div class="hero-intro-block">
+          <h2 class="hero-profile-title">Ingénieur en Génie Industriel <span>|</span> Expert en Science des Données <span>|</span> Industrie 4.0 &amp; Transformation Digitale</h2>
+          <p class="hero-intro">Diplômé d'un diplôme d'ingénieur en Génie Industriel et d'un Mastère Spécialisé Expert en Science des Données, je me suis construit à l'intersection de deux univers complémentaires : l'industrie et le numérique.</p>
+          <p class="hero-intro">Au cours de mes expériences chez Constellium et Michelin, j'ai participé à la conception et au déploiement de solutions digitales permettant de collecter, structurer, analyser et valoriser les données industrielles afin d'améliorer la performance des processus et d'aider à la prise de décision.</p>
+          <p class="hero-intro">Ma conviction est simple : la technologie n'a de valeur que lorsqu'elle répond à un besoin concret du terrain. C'est pourquoi je souhaite évoluer au plus près des opérations industrielles afin de mettre les outils numériques, la donnée et l'intelligence artificielle au service de la productivité, de la qualité et de l'amélioration continue.</p>
+          <p class="hero-intro">Aujourd'hui, mon objectif est de faire le lien entre les métiers industriels et les technologies digitales pour accompagner les entreprises dans leur transformation vers l'industrie du futur.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projets">Explorer mes projets <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="documents/CV_Kilian_Faure.pdf" download> Télécharger mon CV <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta"><span><b>01</b> Génie industriel</span><span><b>02</b> Data & BI</span><span><b>03</b> Transformation digitale</span></div>
+      </div>
+      <div class="hero-visual reveal" aria-label="Illustration graphique de l'industrie et de la donnée">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="visual-grid"></div>
+        <div class="data-card card-top"><span class="mini-label">INDUSTRIE 4.0</span><strong>DATA<span> → </span>ACTION</strong><div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="visual-core"><div class="core-ring"></div><img class="core-center" src="assets/avatar/tete%20avatar%20kilian.png" alt=""><span class="core-label">INDUSTRIE<br>× DATA</span></div>
+        <div class="data-card card-bottom"><span class="mini-label">APPROCHE</span><strong>Comprendre.<br>Construire. Mesurer.</strong><span class="card-line"></span><span class="mini-label">DU TERRAIN AU PILOTAGE</span></div>
+        <span class="floating-tag tag-blue">Power BI</span><span class="floating-tag tag-green">Python</span><span class="floating-tag tag-purple">Power Platform</span>
+      </div>
+      <a class="scroll-cue" href="#parcours"><span class="scroll-line"></span> DÉFILER POUR EXPLORER</a>
+    </section>
 
-        <nav>
-            <a href="#profil">Profil</a>
-            <a href="#parcours">Parcours</a>
-            <a href="#competences">Compétences</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <section class="section-shell section-block" id="parcours">
+      <div class="section-heading reveal"><p class="eyebrow">01 / MON PARCOURS</p><h2>Du terrain aux <span class="gradient-text">données.</span></h2><p>Une trajectoire construite autour de la performance industrielle, de la digitalisation et de l’analyse des données.</p></div>
+      <div class="journey-layout">
+        <aside class="map-panel" aria-label="Carte schématique du parcours géographique">
+          <div class="map-panel-head"><span class="mini-label">FRANCE & EUROPE</span><span class="map-live"><i></i> PARCOURS</span></div>
+          <div class="map-stage">
+            <img class="map-background" src="assets/maps/france-europe-dark.png" alt="Carte stylisée de la France et de l’Europe occidentale" />
+            <svg class="france-map" viewBox="0 0 1536 1024" role="img" aria-labelledby="map-title map-desc" preserveAspectRatio="xMidYMid meet">
+              <title id="map-title">Carte du parcours professionnel</title>
+              <desc id="map-desc">Carte de la France et de l’Allemagne avec des repères à Clermont-Ferrand, Issoire et Singen.</desc>
+              <path class="map-route" d="M700 450 Q680 475 690 500" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-germany" d="M700 450 Q900 320 1180 310" fill="none" stroke="#3276DB" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <g class="map-marker" data-place="clermont" transform="translate(700 450)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="-18">CLERMONT-FERRAND</text></g>
+              <g class="map-marker" data-place="issoire" transform="translate(690 500)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="-20" y="32" text-anchor="end">ISSOIRE</text></g>
+              <g class="map-marker" data-place="singen" transform="translate(1180 310)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="-15">SINGEN</text><text x="20" y="10" class="map-country">ALLEMAGNE</text></g>
+            </svg>
+            <div class="avatar-placeholder" aria-label="Avatar illustré de Kilian Faure"><img class="avatar-image" src="assets/avatar/corps%20avatar.png" alt="Avatar illustré de Kilian Faure" hidden><img class="avatar-fallback" src="assets/avatar/tete%20avatar%20kilian.png" alt=""></div>
+          </div>
+          <div class="map-legend"><span><i class="legend-blue"></i> International</span><span><i class="legend-green"></i> Industrie & digital</span></div>
+          <p class="map-hint">Sélectionnez une étape pour suivre le parcours.</p>
+        </aside>
 
-    <main>
-        <section class="hero" id="profil">
-            <div class="hero-content">
-                <p class="eyebrow">PORTFOLIO PROFESSIONNEL</p>
+        <div class="journey-detail">
+          <div class="timeline" aria-label="Étape sélectionnée du parcours professionnel">
+            <article class="timeline-card reveal is-active" data-step="origines" data-place="clermont" aria-hidden="false">
+              <div class="timeline-top"><span class="timeline-index">01 / 08</span><span class="timeline-date">2002 — 2020</span></div>
+              <div class="timeline-company"><span class="company-symbol sigma-symbol">⌂</span><div><h3>Une enfance au cœur des volcans d'Auvergne</h3><p>Nébouzat · Rochefort-Montagne · Clermont-Ferrand</p></div></div>
+              <p>Originaire de Nébouzat, un village situé au cœur de la chaîne des Puys en Auvergne, j'ai grandi dans un environnement où les valeurs de travail, de proximité et de simplicité occupaient une place importante.</p>
+              <p>J'ai effectué ma scolarité primaire à Nébouzat avant de rejoindre le collège de Rochefort-Montagne. Attiré très tôt par les sciences et la technique, j'ai poursuivi mes études au lycée Lafayette à Clermont-Ferrand où j'ai obtenu un baccalauréat scientifique, option Sciences de l'Ingénieur.</p>
+              <p>À la fin du lycée, souhaitant découvrir rapidement le monde industriel avant de m'engager dans de longues études, j'ai choisi d'intégrer un DUT Génie Industriel et Maintenance plutôt qu'une classe préparatoire scientifique.</p>
+              <div class="tag-list"><span>Auvergne</span><span>Sciences</span><span>Sciences de l'Ingénieur</span></div>
+            </article>
+            <article class="timeline-card" data-step="dut" data-place="clermont" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">02 / 08</span><span class="timeline-date">2020 — 2022</span></div>
+              <div class="timeline-company"><span class="company-symbol sigma-symbol">UCA</span><div><h3>DUT Génie Industriel et Maintenance</h3><p>Université Clermont Auvergne</p></div></div>
+              <p>J'ai intégré le département Génie Industriel et Maintenance de l'Université Clermont Auvergne. Cette formation m'a permis d'acquérir de solides bases techniques et une vision globale du fonctionnement des installations industrielles.</p>
+              <p>Les enseignements couvraient notamment l'électricité industrielle, la lecture et la réalisation de schémas électriques, la mécanique et la résistance des matériaux, l'hydraulique et la pneumatique, la robotique, l'automatisme industriel et la maintenance des systèmes.</p>
+              <div class="tag-list"><span>Électricité</span><span>Mécanique</span><span>Automatisme</span><span>Robotique</span><span>Maintenance</span></div>
+            </article>
+            <article class="timeline-card" data-step="rians" data-place="clermont" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">03 / 08</span><span class="timeline-date">2021 — 2022</span></div>
+              <div class="timeline-company"><span class="company-symbol constellium-symbol">R</span><div><h3>Première expérience industrielle — Rians</h3><p>Technicien de maintenance en alternance · Secteur desserts</p></div></div>
+              <p>Dans le cadre de ma deuxième année de DUT, j'ai intégré l'entreprise Rians sur son site de production de desserts, au sein de l'équipe maintenance du secteur dessert.</p>
+              <p>Mes missions consistaient à assurer la maintenance préventive des équipements, les interventions correctives lors des pannes et l'amélioration de la disponibilité des installations. J'ai également développé des compétences de terrain, notamment en soudure MIG et en diagnostic de pannes.</p>
+              <p>Cette première immersion m'a fait découvrir la réalité des ateliers de production et l'importance de la maintenance dans la performance globale d'une usine. Elle a confirmé mon envie de poursuivre mes études vers des fonctions à plus forte responsabilité.</p>
+              <div class="tag-list"><span>Maintenance préventive</span><span>Diagnostic de panne</span><span>Soudure MIG</span><span>Production</span></div>
+            </article>
+            <article class="timeline-card" data-step="ingenieur" data-place="clermont" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">04 / 08</span><span class="timeline-date">2022 — 2025</span></div>
+              <div class="timeline-company"><span class="company-symbol sigma-symbol">Σ</span><div><h3>Diplôme d'Ingénieur en Génie Industriel</h3><p>ISTP · École Nationale Supérieure des Mines de Saint-Étienne</p></div></div>
+              <p>J'ai poursuivi mon parcours à l'ISTP dans le cadre du diplôme d'Ingénieur en Génie Industriel de l'École Nationale Supérieure des Mines de Saint-Étienne.</p>
+              <p>Cette formation m'a permis d'approfondir mes connaissances en électrotechnique, mécanique, thermodynamique, mathématiques appliquées, statistiques et gestion industrielle. Elle m'a également apporté une vision globale de la performance industrielle grâce au Lean Manufacturing, à la Supply Chain, à la gestion de projet et au management d'équipe.</p>
+              <p>J'y ai développé une approche orientée amélioration continue et conduite du changement, essentielle pour accompagner la transformation des organisations industrielles.</p>
+              <div class="tag-list"><span>Génie industriel</span><span>Lean Manufacturing</span><span>Supply Chain</span><span>Gestion de projet</span></div>
+            </article>
+            <article class="timeline-card" data-step="issoire" data-place="issoire" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">05 / 08</span><span class="timeline-date">2022 — 2025</span></div>
+              <div class="timeline-company"><span class="company-symbol constellium-symbol">C</span><div><h3>Transformation digitale chez Constellium</h3><p>Constellium Issoire · Alternance</p></div></div>
+              <p>En parallèle de mon cursus d'ingénieur, j'ai effectué mon alternance au sein de Constellium Issoire, acteur de la transformation de l'aluminium destiné notamment aux secteurs aéronautique, spatial et défense. Intégré au service Digital, j'ai participé à des projets liés à l'Industrie 4.0 et à la valorisation des données industrielles.</p>
+              <p>Mes missions ont porté sur la mise en place de systèmes de collecte de données, la fiabilisation et la transformation des données industrielles, la réalisation de tableaux de bord Power BI, l'analyse de données pour l'aide à la décision, le suivi d'indicateurs environnementaux et l'analyse de l'usure de composants mécaniques.</p>
+              <p>Cette expérience m'a permis de découvrir le cycle de vie de la donnée, depuis son acquisition jusqu'à sa restitution aux utilisateurs, et de comprendre l'importance de décisions fondées sur des données mesurées et fiables. C'est là que j'ai développé un véritable intérêt pour la data et la transformation digitale.</p>
+              <div class="tag-list"><span>IBA</span><span>Power BI</span><span>Python</span><span>Braincube</span><span>Industrie 4.0</span></div>
+            </article>
+            <article class="timeline-card" data-step="singen" data-place="singen" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">06 / 08</span><span class="timeline-date">JUIN — AOÛT 2025</span></div>
+              <div class="timeline-company"><span class="company-symbol singen-symbol">DE</span><div><h3>Expérience internationale en Allemagne</h3><p>Constellium Singen · Méthodes Maintenance · 12 semaines</p></div></div>
+              <p>Afin d'élargir mon expérience, j'ai réalisé une mission de 12 semaines chez Constellium Singen en Allemagne, au sein du service Méthodes Maintenance.</p>
+              <p>Mes travaux ont porté sur la création de tableaux de bord Power BI pour le suivi des KPI maintenance, l'analyse des indicateurs MTBF et MTTR, la mise en place d'un système de surveillance SPC et la détection précoce des dérives de fonctionnement et des risques de défaillance.</p>
+              <p>Cette expérience m'a conduit à évoluer dans un environnement anglophone et multiculturel, renforçant mon autonomie, mon adaptabilité et mes capacités de communication.</p>
+              <div class="tag-list"><span>Power BI</span><span>MTBF / MTTR</span><span>SPC</span><span>Maintenance</span><span>International</span></div>
+            </article>
+            <article class="timeline-card" data-step="sigma" data-place="clermont" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">07 / 08</span><span class="timeline-date">2025 — 2026</span></div>
+              <div class="timeline-company"><span class="company-symbol sigma-symbol">Σ</span><div><h3>Mastère Spécialisé Expert en Science des Données</h3><p>SIGMA Clermont</p></div></div>
+              <p>Souhaitant approfondir mes compétences dans le domaine de la data, j'ai intégré le Mastère Spécialisé Expert en Science des Données de SIGMA Clermont.</p>
+              <p>Cette formation m'a permis d'acquérir des compétences avancées en statistiques, Machine Learning, Deep Learning, Business Intelligence, développement Python, bases de données PostgreSQL et ingénierie des données. Les projets réalisés m'ont permis de mettre en pratique les concepts théoriques étudiés.</p>
+              <div class="tag-list"><span>Statistiques</span><span>Machine Learning</span><span>Deep Learning</span><span>Python</span><span>PostgreSQL</span><span>Data Engineering</span></div>
+            </article>
+            <article class="timeline-card" data-step="michelin" data-place="clermont" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">08 / 08</span><span class="timeline-date">OCT. 2025 — SEPT. 2026</span></div>
+              <div class="timeline-company"><span class="company-symbol michelin-symbol">M</span><div><h3>Michelin Motorsport</h3><p>Ingénieur Solutions Digitales · Alternance</p></div></div>
+              <p>Au sein de Michelin Motorsport, j'ai contribué à plusieurs projets de digitalisation et d'amélioration des processus. Ma mission principale a consisté à optimiser le processus de demandes d'achat grâce à des solutions numériques.</p>
+              <p>J'ai mobilisé Power Apps, Power Automate, SharePoint, Power BI et Azure pour structurer le processus. J'ai également participé à des projets de traitement de données avec Databricks et à la création de tableaux de bord décisionnels.</p>
+              <p>Enfin, j'ai contribué à une étude de prévision des ventes de pneumatiques historiques à l'aide de modèles de Machine Learning, approfondissant mes connaissances en analyse prédictive.</p>
+              <div class="tag-list"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Azure</span><span>Databricks</span><span>Machine Learning</span></div>
+            </article>
+          </div>
+          <div class="journey-controls" aria-label="Navigation dans le parcours">
+            <button class="journey-nav journey-prev" type="button" disabled>← Précédent</button>
+            <span class="journey-progress" aria-live="polite">Étape 1 sur 8</span>
+            <button class="journey-nav journey-next" type="button">Suivant →</button>
+          </div>
+          <div class="journey-step-dots" aria-label="Choisir une étape du parcours"></div>
+        </div>
+      </div>
+    </section>
 
-                <h1>
-                    Bonjour, moi c'est<br>
-                    <span>Kilian Faure.</span>
-                </h1>
+    <section class="section-shell section-block projects-section" id="projets">
+      <div class="section-heading reveal"><p class="eyebrow">02 / SÉLECTION DE PROJETS</p><h2>Des problèmes concrets.<br><span class="gradient-text">Des solutions mesurables.</span></h2><p>Quelques exemples de réalisations à l’intersection des métiers, des outils numériques et de la donnée.</p></div>
+      <div class="projects-grid">
+        <article class="project-card project-featured reveal">
+          <div class="project-visual visual-workflow"><div class="workflow-node node-one"><span>01</span><b>Demande</b></div><div class="workflow-connector">→</div><div class="workflow-node node-two"><span>02</span><b>Validation</b></div><div class="workflow-connector">→</div><div class="workflow-node node-three"><span>03</span><b>Suivi</b></div><div class="workflow-caption">WORKFLOW DIGITAL · POWER PLATFORM</div></div>
+          <div class="project-content"><div class="project-kicker"><span>MICHELIN MOTORSPORT</span><span>01 / DIGITALISATION</span></div><h3>Structurer un processus de demandes d’achats</h3><p class="project-summary">Remplacer un suivi dispersé entre fichiers et échanges manuels par un processus plus clair, traçable et homogène.</p>
+            <div class="project-detail-grid"><div><h4>Mon rôle</h4><p>Cartographie du processus, ateliers avec les parties prenantes, développement, tests pilotes et accompagnement des utilisateurs.</p></div><div><h4>La solution</h4><p>Application Power Apps, automatisations de notifications et validations, archivage SharePoint et tableau de bord Power BI.</p></div></div>
+            <div class="project-outcome"><span class="outcome-icon">↗</span><p><b>Résultat recherché :</b> réduire les tâches administratives à faible valeur ajoutée, améliorer la traçabilité et limiter les erreurs de saisie.</p></div>
+            <div class="tag-list"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Conduite du changement</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-visual visual-industrial"><div class="machine-grid"><span>IBA</span><span>PLC</span><span>DATA</span><span>BI</span><span>OT</span><span>SQL</span></div><div class="industrial-pulse"></div><div class="visual-caption">COLLECTER / SURVEILLER / VALORISER</div></div>
+          <div class="project-content"><div class="project-kicker"><span>CONSTELLIUM · ISSOIRE</span><span>02 / INDUSTRIE 4.0</span></div><h3>Fiabiliser la donnée industrielle</h3><p>Extension de la collecte de données machines et mise en place de moyens de supervision pour détecter les équipements qui ne transmettent plus leurs données.</p>
+            <div class="project-detail-grid"><div><h4>Actions</h4><p>Installation et configuration IBA, suivi des flux sous Power BI, sauvegardes SVN et scripts Python / Batch.</p></div><div><h4>Impact documenté</h4><p>Parc de machines équipées passé de 25 à 57 ; formation de 35 collaborateurs et amélioration de la visibilité sur les flux.</p></div></div>
+            <div class="tag-list"><span>IBA</span><span>Power BI</span><span>Python</span><span>Braincube</span><span>SVN</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-visual visual-maintenance"><div class="metric-row"><div><span>MTBF</span><b>↗</b><small>Fiabilité</small></div><div><span>MTTR</span><b>↘</b><small>Réparation</small></div><div><span>DISPO.</span><b>◌</b><small>Disponibilité</small></div></div><div class="chart-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="visual-caption">MAINTENANCE · KPI · POWER BI</div></div>
+          <div class="project-content"><div class="project-kicker"><span>CONSTELLIUM · SINGEN</span><span>03 / DATA ANALYTICS</span></div><h3>Donner de la visibilité à la maintenance</h3><p>Construire des tableaux de bord pour mieux suivre les indicateurs de fiabilité et de disponibilité des équipements.</p>
+            <div class="project-detail-grid"><div><h4>Actions</h4><p>Analyse des données, création de visualisations Power BI et échanges avec les équipes maintenance et automatisme.</p></div><div><h4>Apport</h4><p>Indicateurs partagés pour faciliter le suivi des tendances et repérer plus tôt les dérives.</p></div></div>
+            <div class="tag-list"><span>Power BI</span><span>MTBF</span><span>MTTR</span><span>Analyse de données</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="content-note"><span>ⓘ</span> Les résultats présentés sont qualitatifs ou issus des éléments de mon CV. Les détails techniques et données internes restent volontairement confidentiels.</p>
+    </section>
 
-                <h2>Ingénieur Génie Industriel<br>
-                    & Data Scientist</h2>
+    <section class="section-shell section-block skills-section" id="competences">
+      <div class="section-heading reveal"><p class="eyebrow">03 / COMPÉTENCES</p><h2>À l’aise entre le <span class="gradient-text">terrain</span> et le code.</h2><p>Une double compétence pour comprendre les besoins opérationnels et construire des outils adaptés.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-number">01</div><div class="skill-icon">⌘</div><h3>Data & Business Intelligence</h3><p>Transformer des données en indicateurs lisibles pour soutenir la décision.</p><div class="skill-tags"><span>Power BI</span><span>SQL</span><span>Python</span><span>Databricks</span><span>Machine Learning</span></div></article>
+        <article class="skill-card reveal"><div class="skill-number">02</div><div class="skill-icon">⤧</div><h3>Digitalisation des processus</h3><p>Concevoir des applications métiers et automatiser les tâches répétitives.</p><div class="skill-tags"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Microsoft 365</span></div></article>
+        <article class="skill-card reveal"><div class="skill-number">03</div><div class="skill-icon">⌬</div><h3>Industrie 4.0</h3><p>Collecter, superviser et valoriser les données issues des équipements industriels.</p><div class="skill-tags"><span>IBA</span><span>Braincube</span><span>Maintenance</span><span>SPC</span></div></article>
+        <article class="skill-card reveal"><div class="skill-number">04</div><div class="skill-icon">↗</div><h3>Gestion de projet</h3><p>Faire le lien entre utilisateurs, équipes techniques et objectifs opérationnels.</p><div class="skill-tags"><span>Analyse du besoin</span><span>Tests</span><span>Formation</span><span>Accompagnement</span></div></article>
+      </div>
+      <div class="approach-strip reveal"><span class="approach-label">MA MÉTHODE</span><div><b>01</b> Comprendre le terrain</div><span class="approach-arrow">→</span><div><b>02</b> Construire simplement</div><span class="approach-arrow">→</span><div><b>03</b> Mesurer l’impact</div></div>
+    </section>
 
-                <p class="intro">
-                    Je combine la data science, le développement
-                    de solutions digitales et l'amélioration
-                    des processus industriels pour transformer
-                    les données en solutions concrètes.
-                </p>
-
-                <div class="actions">
-                    <a href="#parcours" class="button primary">
-                        Découvrir mon parcours
-                    </a>
-
-                    <a href="#contact" class="button secondary">
-                        Me contacter
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="avatar">KF</div>
-                <p class="card-label">MON PROFIL</p>
-                <h3>Ingénieur & Data</h3>
-                <p>Industrie · Digital · Intelligence des données</p>
-                <div class="status">
-                    <span></span> Ouvert aux opportunités
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="parcours">
-            <p class="eyebrow">MON HISTOIRE</p>
-            <h2>Un parcours en mouvement.</h2>
-            <p>
-                De mes premières études en Auvergne à mes expériences
-                dans l'industrie, chaque étape m'a permis d'apprendre
-                et de progresser.
-            </p>
-
-            <div class="timeline">
-                <article class="journey-card">
-                    <span class="year">ORIGINES</span>
-                    <h3>📍 Nébouzat, Auvergne</h3>
-                    <p>Mes premières années et mes débuts dans les études.</p>
-                </article>
-
-                <article class="journey-card">
-                    <span class="year">INGÉNIERIE</span>
-                    <h3>🎓 Génie industriel</h3>
-                    <p>Formation d'ingénieur et alternance en industrie.</p>
-                </article>
-
-                <article class="journey-card">
-                    <span class="year">DATA SCIENCE</span>
-                    <h3>💻 SIGMA Clermont</h3>
-                    <p>Spécialisation en science des données et solutions digitales.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section" id="competences">
-            <p class="eyebrow">SAVOIR-FAIRE</p>
-            <h2>Mes compétences.</h2>
-
-            <div class="skills">
-                <div class="skill">Python & SQL</div>
-                <div class="skill">Data Science</div>
-                <div class="skill">Power BI</div>
-                <div class="skill">Power Apps</div>
-                <div class="skill">Power Automate</div>
-                <div class="skill">Génie industriel</div>
-            </div>
-        </section>
-
-        <section class="section contact" id="contact">
-            <p class="eyebrow">ÉCHANGEONS</p>
-            <h2>Un projet ou une opportunité ?</h2>
-            <p>Je serais ravi d'échanger avec vous.</p>
-            <a href="mailto:TON-EMAIL" class="button primary">
-                Me contacter par email
-            </a>
-        </section>
-    </main>
-
-    <footer>
-        <p>© <span id="year"></span> Kilian Faure · Portfolio</p>
-    </footer>
-
+    <section class="contact-section" id="contact"><div class="section-shell contact-inner reveal"><div><p class="eyebrow">04 / CONTACT</p><h2>Un besoin à résoudre ?<br><span class="gradient-text">Parlons-en.</span></h2><p>Je suis ouvert aux opportunités en data, solutions digitales et transformation industrielle.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:k.faure12@gmail.com">M’écrire un message <span>↗</span></a><a class="contact-link" href="https://github.com/KilianFAURE" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a class="contact-link" href="documents/CV_Kilian_Faure.pdf" download>CV PDF <span>↓</span></a></div></div></section>
+  </main>
+  <footer class="site-footer section-shell"><a class="brand footer-brand" href="#accueil"><img class="brand-mark" src="assets/avatar/tete%20avatar%20kilian.png" alt=""><span>KILIAN FAURE<span class="brand-sub">GÉNIE INDUSTRIEL × DATA</span></span></a><span>Conçu avec HTML, CSS & JavaScript.</span><a href="#accueil" class="back-top">Retour en haut ↑</a><span class="copyright">© <span id="year">2026</span> Kilian Faure</span></footer>
 </body>
 </html>
-
