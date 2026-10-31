@@ -286,3 +286,115 @@ h2 { font-size: clamp(31px, 4vw, 47px); line-height: 1.2; letter-spacing: -.045e
 .timeline-stamp img.is-missing { opacity: 0; }
 .timeline-stamp:has(img.is-missing) { background: linear-gradient(145deg, #1c3555, #0c1728 65%, #3276db); }
 .timeline-stamp:has(img.is-missing)::before { content: "KF"; position: absolute; inset: 0 6px 22px; display: grid; place-items: center; color: #b9d5ff; font: 24px var(--mono); letter-spacing: .12em; }
+
+/* ==========================================================================
+   Améliorations V3 — lisibilité, accessibilité, chiffres clés, navigation
+   ========================================================================== */
+:root { --muted-2: #8798b2; }
+
+/* Tailles de texte minimales (les anciennes tailles 7–10 px étaient illisibles) */
+.eyebrow { font-size: 11px; }
+.mini-label { font-size: 10px; }
+.main-nav { font-size: 13px; }
+.brand-sub { font-size: 9px; }
+.hero-meta { font-size: 11px; }
+.scroll-cue { font-size: 10px; }
+.section-heading > p:last-child { font-size: 15px; }
+.map-live { font-size: 10px; }
+.map-legend { font-size: 11px; }
+.map-hint { font-size: 11px; }
+.timeline-date { font-size: 10px; }
+.timeline-company h3 { font-size: 15px; }
+.timeline-company p { font-size: 12px; }
+.timeline-card > p { font-size: 12.5px; line-height: 1.75; }
+.tag-list span, .skill-tags span { font-size: 10.5px; padding: 5px 8px; }
+.timeline-stamp figcaption { font-size: 8px; }
+.journey-nav, .journey-progress { font-size: 12px; }
+.project-kicker { font-size: 10px; }
+.project-content h3 { font-size: 20px; }
+.project-summary, .project-content > p { font-size: 13px; }
+.project-detail-grid h4 { font-size: 12px; }
+.project-detail-grid p, .project-outcome p { font-size: 12px; }
+.workflow-caption, .visual-caption { font-size: 9px; }
+.workflow-node span { font-size: 10px; }.workflow-node b { font-size: 12px; }
+.metric-row span, .metric-row small { font-size: 9px; }
+.content-note { font-size: 12px; }
+.skill-number { font-size: 11px; }
+.skill-card h3 { font-size: 15px; }
+.skill-card p { font-size: 12px; }
+.skill-tags span { font-size: 10px; }
+.approach-strip { font-size: 12px; }.approach-label { font-size: 10px; }.approach-strip b { font-size: 12px; }
+.contact-inner > div:first-child > p:last-child { font-size: 14px; }
+.contact-link { font-size: 12px; }
+.site-footer { font-size: 11px; }.copyright { font-size: 10px; }
+
+/* Introduction : plus courte, avec une phrase d'accroche mise en valeur */
+.hero-intro-block .hero-intro { font-size: 14px; line-height: 1.8; }
+.hero-conviction { padding-left: 16px; border-left: 2px solid var(--green); color: var(--text); }
+
+/* Chiffres clés */
+.key-figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: -12px; }
+.key-figures > div { padding: 20px 22px; border: 1px solid var(--line); border-radius: 13px; background: rgba(20,31,50,.55); }
+.key-figures b { display: block; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; letter-spacing: -.04em; background: linear-gradient(100deg, #72A9FF 4%, #59C289 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.key-figures span { display: block; margin-top: 6px; color: var(--text); font-size: 13px; line-height: 1.5; }
+.key-figures small { display: block; margin-top: 4px; color: var(--muted-2); font: 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+
+/* Navigation : lien de la section visible mis en évidence */
+.main-nav a[aria-current="true"]:not(.nav-contact) { color: #fff; box-shadow: 0 2px 0 var(--green); }
+
+/* Parcours : le texte entoure la vignette au lieu de la contourner par une grande marge */
+@media (min-width: 761px) {
+  #parcours .timeline-card { padding-right: 24px; }
+  .timeline-stamp { position: relative; float: right; top: auto; right: auto; margin: 0 0 12px 18px; }
+  .timeline-company { overflow: hidden; }
+  .timeline-card::after { content: ""; display: block; clear: both; }
+}
+
+/* Cibles tactiles et focus clavier */
+.journey-dot { position: relative; }
+.journey-dot::after { content: ""; position: absolute; inset: -9px; }
+.journey-dot:focus-visible, .journey-nav:focus-visible, .menu-toggle:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.menu-toggle { cursor: pointer; }
+.button:focus-visible, .contact-link:focus-visible { outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  .timeline-stamp { position: absolute; float: none; top: 18px; left: 20px; margin: 0; }
+  .hero-intro-block .hero-intro { font-size: 13px; }
+  .timeline-card > p { font-size: 12.5px; }
+  .key-figures { grid-template-columns: 1fr; margin-top: 0; }
+  .key-figures > div { display: flex; align-items: baseline; gap: 14px; padding: 16px 18px; }
+  .key-figures b { flex: none; min-width: 96px; font-size: 26px; }
+  .key-figures span { margin-top: 0; }
+  .skill-card p { font-size: 12px; }
+}
+@media (max-width: 420px) {
+  .project-kicker { font-size: 9px; }
+  .skill-card p { font-size: 12px; }
+}
+
+/* Corrections de mise en page */
+.tag-purple { bottom: 205px; }
+.map-marker text { font-size: 24px; stroke-width: 6px; }
+.map-marker .map-country { font-size: 18px; }
+@media (min-width: 761px) {
+  #parcours .map-panel { height: auto; align-self: center; }
+}
+@media (max-width: 760px) {
+  /* Sur mobile le panneau n'est pas fixe : les zones de défilement vides sont supprimées,
+     la navigation se fait avec les boutons, les points ou la carte. */
+  .journey-scroll-steps { display: none; }
+  #parcours .timeline-card { padding-top: 150px; }
+}
+.timeline-card { scroll-margin-top: 90px; }
+
+/* ==== V4 : lignes du parcours progressives, bloc « pourquoi », 4 chiffres clés, LinkedIn ==== */
+.map-route { opacity: 0; transition: opacity .7s ease; }
+.map-route.is-revealed { opacity: 1; }
+.map-route.route-to-clermont.is-revealed { opacity: .75; }
+.timeline-why { margin: 2px 0 15px; padding: 10px 12px; border-left: 2px solid var(--green); border-radius: 0 8px 8px 0; background: rgba(89,194,137,.06); color: #cfe0f2 !important; clear: both; }
+.timeline-why b { display: block; margin-bottom: 3px; color: var(--green); font: 500 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.key-figures { grid-template-columns: repeat(4, 1fr); }
+.key-figures b { font-size: clamp(24px, 2.7vw, 32px); }
+.contact-link-wide { grid-column: 1 / -1; }
+@media (max-width: 1000px) { .key-figures { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .key-figures { grid-template-columns: 1fr; } }

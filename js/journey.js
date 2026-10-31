@@ -2,6 +2,7 @@
 (() => {
   const cards = [...document.querySelectorAll('.timeline-card')];
   const markers = [...document.querySelectorAll('.map-marker')];
+  const routes = [...document.querySelectorAll('.map-route')];
   const avatar = document.querySelector('.avatar-placeholder');
   const avatarImage = document.querySelector('.avatar-image');
   const avatarFallback = document.querySelector('.avatar-fallback');
@@ -44,6 +45,8 @@
       item.classList.toggle('is-active', active);
     });
     const place = card.dataset.place || 'clermont';
+    // Les lignes du parcours n'apparaissent qu'une fois l'étape d'arrivée atteinte.
+    routes.forEach(route => route.classList.toggle('is-revealed', activeIndex >= Number(route.dataset.revealStep)));
     markers.forEach(marker => {
       const active = marker.dataset.place === place; marker.classList.toggle('is-active', active); marker.setAttribute('aria-pressed', String(active));
     });
@@ -54,7 +57,11 @@
     if (next) next.disabled = activeIndex === cards.length - 1;
     if (progress) progress.textContent = `Étape ${activeIndex + 1} sur ${cards.length}`;
     if (dots) [...dots.children].forEach((dot, i) => { dot.classList.toggle('is-active', i === activeIndex); dot.setAttribute('aria-current', i === activeIndex ? 'step' : 'false'); });
-    if (shouldScroll && !isScrollActivating && triggers[activeIndex]) {
+    if (shouldScroll && matchMedia('(max-width: 760px)').matches) {
+      // Mobile : pas de zones de défilement, on remonte simplement en haut de la carte si elle est sortie de l'écran.
+      const top = card.getBoundingClientRect().top;
+      if (top < 80) card.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    } else if (shouldScroll && !isScrollActivating && triggers[activeIndex]) {
       isScrollActivating = true; triggers[activeIndex].scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
       window.setTimeout(() => { isScrollActivating = false; }, 700);
     }
@@ -75,6 +82,12 @@
     marker.setAttribute('aria-label', `Afficher une étape à ${marker.dataset.place}`);
     const selectLocation = () => { const matches = cards.map((card, index) => ({ card, index })).filter(item => item.card.dataset.place === marker.dataset.place); if (!matches.length) return; const current = matches.findIndex(item => item.index === activeIndex); activate(matches[(current + 1) % matches.length].index, true); };
     marker.addEventListener('click', selectLocation); marker.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectLocation(); } });
+  });
+  // Navigation clavier : flèches gauche / droite quand le focus est dans le parcours
+  document.querySelector('.journey-layout')?.addEventListener('keydown', event => {
+    if (event.target.closest('.map-marker')) return;
+    if (event.key === 'ArrowRight') { event.preventDefault(); activate(activeIndex + 1, true); }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); activate(activeIndex - 1, true); }
   });
   activate(activeIndex);
 })();
