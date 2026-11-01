@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0B1220">
+  <meta name="color-scheme" content="dark light">
+  <script>try{var t=localStorage.getItem("kf-theme");document.documentElement.dataset.theme=(t==="light"||t==="dark")?t:"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
   <meta name="description" content="Portfolio de Kilian Faure, ingénieur en génie industriel et diplômé d’un Mastère Spécialisé en science des données. Projets data, BI et transformation digitale industrielle.">
   <meta name="author" content="Kilian Faure">
   <link rel="canonical" href="https://kilianfaure.github.io/">
@@ -30,46 +32,49 @@
   <noscript><style>.reveal{opacity:1!important;transform:none!important}.timeline-card[hidden]{display:block!important}.journey-scroll-steps{display:none}#parcours .journey-layout{position:static!important;height:auto!important}#parcours .timeline-card{max-height:none!important}</style></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/egg.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/journey.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header">
-    <a class="brand" href="#accueil" aria-label="Kilian Faure, accueil"><img class="brand-mark" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="37" height="55"><span>KILIAN FAURE<span class="brand-sub">PORTFOLIO / 2026</span></span></a>
+    <a class="brand" href="#accueil" aria-label="Kilian Faure, accueil"><img class="brand-mark" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="37" height="55"><span>KILIAN FAURE<span class="brand-sub">Portfolio · 2026</span></span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
       <a href="#parcours">Parcours</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#contact" class="nav-contact">Me contacter <span aria-hidden="true">↗</span></a>
     </nav>
+    <div class="header-tools">
+      <button class="tool-btn" id="sound-toggle" type="button" aria-pressed="true" aria-label="Couper le son"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z" fill="currentColor"/><path class="waves" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="slash" d="M4 4l16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="tool-btn" id="theme-toggle" type="button" aria-label="Passer en mode clair"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="currentColor"/></svg></button>
+    </div>
   </header>
 
   <main id="contenu">
     <section class="hero section-shell" id="accueil">
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="status-dot"></span> DISPONIBLE POUR DE NOUVELLES OPPORTUNITÉS</p>
-        <h1>Faire le lien entre<br><span class="gradient-text">l’industrie & la data.</span></h1>
+        <p class="eyebrow"><span class="status-dot"></span> Disponible pour de nouvelles opportunités</p>
+        <h1>Faire le lien entre<br><span class="gradient-text">l’industrie et la data.</span></h1>
         <div class="hero-intro-block">
-          <h2 class="hero-profile-title">Ingénieur en Génie Industriel <span>|</span> Expert en Science des Données <span>|</span> Industrie 4.0 &amp; Transformation Digitale</h2>
-          <p class="hero-intro">Ingénieur diplômé en Génie Industriel et titulaire d’un Mastère Spécialisé en Science des Données, j’évolue depuis 4 ans dans le digital appliqué à l’industrie : collecte et exploitation de données machines, développement et déploiement d’outils digitaux, formation des utilisateurs. Chez Constellium puis chez Michelin Motorsport, j’ai contribué à des projets de transformation digitale industrielle.</p>
-          <p class="hero-intro hero-conviction">Pour moi, la technologie n’a de valeur que si elle répond à un besoin concret du terrain. Je recherche aujourd’hui un poste, au plus près des opérations industrielles, où relier les métiers et les outils digitaux (données, IA) pour contribuer à la performance et à l’industrie du futur.</p>
+          <h2 class="hero-profile-title">Ingénieur Génie Industriel, spécialisé en science des données</h2>
+          <p class="hero-intro">Diplômé ingénieur en Génie Industriel, avec un Mastère Spécialisé en Science des Données. Depuis 4 ans, je travaille sur le digital appliqué à l’industrie : collecter et exploiter des données machines, développer des outils, former les utilisateurs. Je l’ai fait chez Constellium, puis chez Michelin Motorsport.</p>
+          <p class="hero-intro hero-conviction">Ce que j’aime, c’est partir du terrain : comprendre ce qui coince dans un atelier ou dans un processus, puis trouver l’outil qui aide vraiment. Je cherche un poste où continuer à faire ça, au contact des équipes industrielles.</p>
         </div>
         <div class="hero-actions">
           <a class="button button-primary" href="#projets">Explorer mes projets <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="documents/CV_Kilian_FAURE.pdf" download> Télécharger mon CV <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-meta"><span><b>01</b> Génie industriel</span><span><b>02</b> Data & BI</span><span><b>03</b> Transformation digitale</span></div>
+        
       </div>
-      <div class="hero-visual reveal" aria-label="Illustration graphique de l'industrie et de la donnée">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="visual-grid"></div>
-        <div class="data-card card-top"><span class="mini-label">INDUSTRIE 4.0</span><strong>DATA<span> → </span>ACTION</strong><div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-        <div class="visual-core"><div class="core-ring"></div><img class="core-center" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="82" height="123"><span class="core-label">INDUSTRIE<br>× DATA</span></div>
-        <div class="data-card card-bottom"><span class="mini-label">APPROCHE</span><strong>Comprendre.<br>Construire. Mesurer.</strong><span class="card-line"></span><span class="mini-label">DU TERRAIN AU PILOTAGE</span></div>
-        <span class="floating-tag tag-blue">Power BI</span><span class="floating-tag tag-green">Python</span><span class="floating-tag tag-purple">Power Platform</span>
+      <div class="hero-visual reveal">
+        <button class="portrait" id="portrait-btn" type="button" aria-label="Photo de Kilian"><span class="portrait-blob" aria-hidden="true"></span><img class="portrait-img" id="portrait-img" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="265" height="396" draggable="false"></button>
+        <span class="sticker sticker-1" aria-hidden="true">Industrie 4.0</span><span class="sticker sticker-2" aria-hidden="true">Data</span><span class="sticker sticker-3" aria-hidden="true">Terrain</span>
+        <p class="scribble" aria-hidden="true"><svg viewBox="0 0 60 50" width="46" height="38"><path d="M52 44C30 46 12 34 8 8M8 8L3 19M8 8l12 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="scribble-text">c’est moi !</span></p>
       </div>
-      <a class="scroll-cue" href="#parcours"><span class="scroll-line"></span> DÉFILER POUR EXPLORER</a>
+      <a class="scroll-cue" href="#parcours"><span class="scroll-line"></span> Faire défiler</a>
     </section>
 
     <section class="section-shell key-figures reveal" aria-label="Chiffres clés issus de mon CV">
@@ -80,7 +85,7 @@
     </section>
 
 <section class="section-shell section-block" id="parcours">
-      <div class="section-heading reveal"><p class="eyebrow">01 / MON PARCOURS</p><h2>Du terrain aux <span class="gradient-text">données.</span></h2><p>Une trajectoire construite autour de la performance industrielle, de la digitalisation et de l’analyse des données. Pour chaque étape : ce que j’ai fait, et pourquoi je l’ai choisie.</p></div>
+      <div class="section-heading reveal"><p class="eyebrow">01 · mon parcours</p><h2>Du terrain <span class="gradient-text">à la donnée.</span></h2><p>Une trajectoire construite autour de la performance industrielle, de la digitalisation et de l’analyse des données. Pour chaque étape : ce que j’ai fait, et pourquoi je l’ai choisie.</p></div>
       <div class="journey-layout">
         <aside class="map-panel" aria-label="Carte schématique du parcours géographique">
           <div class="map-panel-head"><span class="mini-label">FRANCE & EUROPE</span><span class="map-live"><i></i> PARCOURS</span></div>
@@ -89,11 +94,11 @@
             <svg class="france-map" viewBox="0 0 1536 1024" role="group" aria-labelledby="map-title map-desc" preserveAspectRatio="xMidYMid meet">
               <title id="map-title">Carte du parcours professionnel</title>
               <desc id="map-desc">Carte de la France et de l'Allemagne avec des repères à Clermont-Ferrand, Rians, Saint-Étienne, Issoire et Singen.</desc>
-              <path class="map-route route-to-rians" data-reveal-step="2" d="M732 692 Q 695 580 690 470" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
-              <path class="map-route route-to-saint-etienne" data-reveal-step="3" d="M690 470 Q 780 580 846 738" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
-              <path class="map-route route-to-issoire" data-reveal-step="4" d="M846 738 Q 788 750 730 738" fill="none" stroke="#59C289" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
-              <path class="map-route route-to-singen route-to-germany" data-reveal-step="5" d="M730 738 Q 1000 500 1320 400" fill="none" stroke="#3276DB" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
-              <path class="map-route route-to-clermont" data-reveal-step="6" d="M1320 400 Q 1000 520 732 692" fill="none" stroke="#3276DB" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" opacity="0.75" />
+              <path class="map-route route-to-rians" data-reveal-step="2" d="M732 692 Q 695 580 690 470" fill="none" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-saint-etienne" data-reveal-step="3" d="M690 470 Q 780 580 846 738" fill="none" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-issoire" data-reveal-step="4" d="M846 738 Q 788 750 730 738" fill="none" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-singen route-to-germany" data-reveal-step="5" d="M730 738 Q 1000 500 1320 400" fill="none" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" />
+              <path class="map-route route-to-clermont" data-reveal-step="6" d="M1320 400 Q 1000 520 732 692" fill="none" stroke-width="4" stroke-dasharray="7 9" stroke-linecap="round" opacity="0.75" />
               <g class="map-marker" data-place="clermont" transform="translate(732 692)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="5">CLERMONT-FERRAND</text></g>
               <g class="map-marker" data-place="rians" transform="translate(690 470)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="5">RIANS</text></g>
               <g class="map-marker" data-place="saint-etienne" transform="translate(846 738)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="5">SAINT-ÉTIENNE</text></g>
@@ -115,7 +120,7 @@
                 <figcaption>ÉTAPE 01</figcaption>
               </figure>
               <div class="timeline-company"><img class="company-symbol sigma-symbol company-logo" src="assets/images/logo/logo1.webp" alt="" width="64" height="64"><div><h3>Une enfance au cœur des volcans d'Auvergne</h3><p>Nébouzat · Rochefort-Montagne · Clermont-Ferrand</p></div></div>
-              <p>Originaire de Nébouzat, au cœur de la chaîne des Puys, j'ai grandi dans un environnement où comptaient le travail, la proximité et la simplicité. Scolarité primaire à Nébouzat, collège à Rochefort-Montagne, puis lycée Lafayette à Clermont-Ferrand, où j'ai obtenu un baccalauréat scientifique option Sciences de l'Ingénieur.</p><p>Attiré très tôt par les sciences et la technique, je cherchais à comprendre comment les choses fonctionnent concrètement.</p>
+              <p>Originaire de Nébouzat, au cœur de la chaîne des Puys, j’ai grandi dans un environnement où comptaient l’entraide, la simplicité et la réalisation de tâches manuelles, type bricolage. Scolarité primaire à Nébouzat, collège à Rochefort-Montagne, puis lycée Lafayette à Clermont-Ferrand, où j'ai obtenu un baccalauréat scientifique option Sciences de l'Ingénieur.</p><p>Attiré très tôt par les sciences et la technique, je cherchais à comprendre comment les choses fonctionnent concrètement.</p>
               <p class="timeline-why"><b>Pourquoi cette étape</b>Je voulais découvrir rapidement le monde industriel avant de m'engager dans de longues études : j'ai choisi un DUT Génie Industriel et Maintenance plutôt qu'une classe préparatoire.</p>
               <div class="tag-list"><span>Auvergne</span><span>Sciences</span><span>Sciences de l'Ingénieur</span></div>
             </article>
@@ -133,10 +138,10 @@
             <article class="timeline-card" data-step="rians" data-place="rians" aria-hidden="true" hidden>
               <div class="timeline-top"><span class="timeline-index">03 / 08</span><span class="timeline-date">SEPT. 2021 — AOÛT 2022</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 3">
-                <img src="assets/images/parcours/etape-03.webp" alt="Illustration : Première expérience industrielle — Triballat" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
+                <img src="assets/images/parcours/etape-03.webp" alt="Illustration : Triballat : ma première expérience industrielle" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 03</figcaption>
               </figure>
-              <div class="timeline-company"><img class="company-symbol constellium-symbol company-logo" src="assets/images/logo/logo3.webp" alt="" width="64" height="64"><div><h3>Première expérience industrielle — Triballat</h3><p>Technicien de maintenance en alternance · Usine desserts (La Laiterie de Rians)</p></div></div>
+              <div class="timeline-company"><img class="company-symbol constellium-symbol company-logo" src="assets/images/logo/logo3.webp" alt="" width="64" height="64"><div><h3>Triballat : ma première expérience industrielle</h3><p>Technicien de maintenance en alternance · Usine desserts (La Laiterie de Rians)</p></div></div>
               <p>Au sein de l'équipe maintenance de l'usine desserts, j'ai évolué dans un environnement agroalimentaire exigeant : interventions de terrain sur les équipements de production, dans le respect des normes d'hygiène et de sécurité, pour assurer la continuité de la production.</p><p>Maintenance préventive et corrective, diagnostic de pannes multi-techniques (électrique, mécanique, pneumatique), soudure MIG, et contribution à la fiabilité des installations et à la réduction des dysfonctionnements.</p>
               <p class="timeline-why"><b>Pourquoi cette étape</b>Cette immersion m'a fait découvrir la réalité des ateliers et le poids de la maintenance dans la performance d'une usine. Elle a confirmé mon envie de viser des fonctions à plus forte responsabilité.</p>
               <div class="tag-list"><span>Maintenance préventive</span><span>Maintenance corrective</span><span>Diagnostic de panne</span><span>Soudure MIG</span><span>Agroalimentaire</span></div>
@@ -166,10 +171,10 @@
             <article class="timeline-card" data-step="singen" data-place="singen" aria-hidden="true" hidden>
               <div class="timeline-top"><span class="timeline-index">06 / 08</span><span class="timeline-date">JUIN — AOÛT 2025</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 6">
-                <img src="assets/images/parcours/etape-06.webp" alt="Illustration : Data Analyste — stage international en Allemagne" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
+                <img src="assets/images/parcours/etape-06.webp" alt="Illustration : Data Analyste, stage international en Allemagne" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 06</figcaption>
               </figure>
-              <div class="timeline-company"><img class="company-symbol singen-symbol company-logo" src="assets/images/logo/logo5.webp" alt="" width="64" height="64"><div><h3>Data Analyste — stage international en Allemagne</h3><p>Constellium Singen · Département Maintenance · 12 semaines</p></div></div>
+              <div class="timeline-company"><img class="company-symbol singen-symbol company-logo" src="assets/images/logo/logo5.webp" alt="" width="64" height="64"><div><h3>Data Analyste, stage international en Allemagne</h3><p>Constellium Singen · Département Maintenance · 12 semaines</p></div></div>
               <p>Au sein du département Maintenance de Constellium Singen, j'ai développé des tableaux de bord Power BI pour suivre les indicateurs de maintenance (MTBF, MTTR, taux de disponibilité des équipements).</p><p>J'ai aussi déployé en autonomie une solution de maintenance prédictive (CCM), déjà utilisée à Issoire, pour anticiper les défaillances et améliorer la fiabilité des installations, dans un environnement anglophone et multiculturel.</p>
               <p class="timeline-why"><b>Pourquoi cette étape</b>Je voulais élargir mon expérience à l'international, gagner en autonomie et montrer qu'une solution éprouvée sur un site pouvait être transférée sur un autre.</p>
               <div class="tag-list"><span>Power BI</span><span>MTBF / MTTR</span><span>Maintenance prédictive (CCM)</span><span>International</span></div>
@@ -188,10 +193,10 @@
             <article class="timeline-card" data-step="michelin" data-place="clermont" aria-hidden="true" hidden>
               <div class="timeline-top"><span class="timeline-index">08 / 08</span><span class="timeline-date">OCT. 2025 — SEPT. 2026</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 8">
-                <img src="assets/images/parcours/etape-08.webp" alt="Illustration : Michelin Motorsport — Ingénieur Solutions Digitales" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
+                <img src="assets/images/parcours/etape-08.webp" alt="Illustration : Michelin Motorsport : Ingénieur Solutions Digitales" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 08</figcaption>
               </figure>
-              <div class="timeline-company"><img class="company-symbol michelin-symbol company-logo" src="assets/images/logo/logo8.webp" alt="" width="64" height="64"><div><h3>Michelin Motorsport — Ingénieur Solutions Digitales</h3><p>Michelin · Alternance · Clermont-Ferrand</p></div></div>
+              <div class="timeline-company"><img class="company-symbol michelin-symbol company-logo" src="assets/images/logo/logo8.webp" alt="" width="64" height="64"><div><h3>Michelin Motorsport : Ingénieur Solutions Digitales</h3><p>Michelin · Alternance · Clermont-Ferrand</p></div></div>
               <p>J'ai contribué à des projets de transformation digitale visant à améliorer l'efficacité opérationnelle et la valorisation des données. Mon principal projet : digitaliser le processus des Demandes d'Achats Électroniques (DAE), jusque-là basé sur Excel, macros et échanges d'e-mails, avec une solution intégrée Power Platform (Power Apps, Power Automate, SharePoint, Power BI).</p><p>J'ai aussi travaillé sur des traitements de données avec Databricks, des tableaux de bord décisionnels, une étude de prévision des ventes de pneumatiques historiques par Machine Learning, et accompagné les utilisateurs dans la conduite du changement.</p>
               <p class="timeline-why"><b>Pourquoi cette étape</b>Réunir les deux versants de mon parcours, le terrain industriel et la data, sur des processus métiers réels et dans un environnement exigeant en performance.</p>
               <div class="tag-list"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Databricks</span><span>Machine Learning</span></div>
@@ -218,47 +223,70 @@
     </section>
 
     <section class="section-shell section-block projects-section" id="projets">
-      <div class="section-heading reveal"><p class="eyebrow">02 / PROJETS MARQUANTS</p><h2>Trois projets menés<br><span class="gradient-text">en entreprise.</span></h2><p>Des réalisations concrètes, à l’intersection des métiers industriels, des outils numériques et de la donnée.</p></div>
-      <div class="projects-grid">
-        <article class="project-card project-featured reveal">
-          <div class="project-visual visual-workflow"><div class="workflow-node node-one"><span>01</span><b>Demande</b></div><div class="workflow-connector">→</div><div class="workflow-node node-two"><span>02</span><b>Validation</b></div><div class="workflow-connector">→</div><div class="workflow-node node-three"><span>03</span><b>Suivi</b></div><div class="workflow-caption">WORKFLOW DIGITAL · POWER PLATFORM</div></div>
-          <div class="project-content"><div class="project-kicker"><span>MICHELIN MOTORSPORT</span><span>01 / DIGITALISATION</span></div><h3>Optimiser le processus de demandes d’achats</h3><p class="project-summary">Remplacer un fonctionnement reposant sur Excel, des macros et des échanges d’e-mails par une solution intégrée pour les Demandes d’Achats Électroniques (DAE) : plus claire, traçable et homogène.</p>
-            <div class="project-detail-grid"><div><h4>Mon rôle</h4><p>Analyse et cartographie du processus, ateliers avec les parties prenantes, développement, tests pilotes, accompagnement des utilisateurs et conduite du changement.</p></div><div><h4>La solution</h4><p>Application Power Apps, automatisations de notifications et de validations avec Power Automate, archivage SharePoint et tableau de bord Power BI.</p></div></div>
-            <div class="project-outcome"><span class="outcome-icon">↗</span><p><b>Objectif visé :</b> réduire les tâches administratives à faible valeur ajoutée, améliorer la traçabilité et limiter les erreurs de saisie.</p></div>
-            <div class="tag-list"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Conduite du changement</span></div>
+      <div class="section-heading reveal"><p class="eyebrow">02 · mes projets</p><h2>Trois projets dont je suis <span class="gradient-text">plutôt fier.</span></h2><p>Des cas vécus en entreprise : le point de départ, ce que j’ai fait, et ce que ça a donné.</p></div>
+      <div class="cases">
+        <article class="case reveal">
+          <header class="case-head"><span class="case-num">01</span><div><p class="case-org">Michelin Motorsport <span>· Alternance</span></p><h3>Optimiser le processus de demandes d’achats</h3></div></header>
+          <div class="case-body">
+            <div><h4>Le point de départ</h4><p>Les Demandes d’Achats Électroniques (DAE) reposaient sur Excel, des macros et des échanges d’e-mails.</p></div>
+            <div><h4>Ce que j’ai fait</h4><ul><li>Analyse du processus et des besoins avec les utilisateurs</li><li>Développement de l’application sous Power Apps</li><li>Validations et notifications automatisées avec Power Automate</li><li>Stockage SharePoint et suivi sous Power BI</li><li>Accompagnement des utilisateurs dans le changement</li></ul></div>
+            <div><h4>Ce que ça a donné</h4><p>Un processus unique, intégré à Power Platform, à la place de fichiers et d’e-mails dispersés. Objectif visé : moins de tâches administratives et plus de traçabilité.</p></div>
           </div>
+          <div class="case-flow"><div class="flow-box flow-before"><small>Avant</small><b>Excel, macros, e-mails</b></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-box flow-after"><small>Après</small><b>Power Apps, Power Automate, SharePoint</b></div></div>
+          <div class="tag-list"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Conduite du changement</span></div>
         </article>
-        <article class="project-card reveal">
-          <div class="project-visual visual-industrial"><div class="machine-grid"><span>IBA</span><span>PLC</span><span>DATA</span><span>BI</span><span>OT</span><span>SQL</span></div><div class="industrial-pulse"></div><div class="visual-caption">COLLECTER / SURVEILLER / VALORISER</div></div>
-          <div class="project-content"><div class="project-kicker"><span>CONSTELLIUM · ISSOIRE</span><span>02 / INDUSTRIE 4.0</span></div><h3>Mettre en place et fiabiliser un système de collecte de données</h3><p>Étendre la collecte de données machines connectées aux automates industriels (IBA) et superviser les flux pour détecter les équipements qui ne transmettent plus leurs données.</p>
-            <div class="project-detail-grid"><div><h4>Actions</h4><p>Installation et configuration IBA, suivi des flux sous Power BI, sauvegardes SVN, scripts Python / Batch et formation des utilisateurs.</p></div><div><h4>Impact documenté</h4><p>Parc de machines équipées passé de 25 à 57 ; 35 collaborateurs formés ; meilleure visibilité sur les flux de données.</p></div></div>
-            <div class="tag-list"><span>IBA</span><span>Power BI</span><span>Python</span><span>SVN</span><span>Formation</span></div>
+        <article class="case reveal">
+          <header class="case-head"><span class="case-num">02</span><div><p class="case-org">Constellium Issoire <span>· Alternance</span></p><h3>Mettre en place et fiabiliser un système de collecte de données</h3></div></header>
+          <div class="case-body">
+            <div><h4>Le point de départ</h4><p>Il fallait collecter les données des machines connectées aux automates industriels (IBA) et s’assurer qu’elles remontaient correctement.</p></div>
+            <div><h4>Ce que j’ai fait</h4><ul><li>Installation et configuration des systèmes IBA</li><li>Suivi des flux sous Power BI pour repérer les machines qui ne transmettent plus</li><li>Sauvegardes SVN, scripts Python et Batch</li><li>Formation des utilisateurs</li></ul></div>
+            <div><h4>Ce que ça a donné</h4><p>Le parc de machines équipées est passé de 25 à 57, et 35 collaborateurs ont été formés.</p></div>
           </div>
+          <div class="case-flow"><div class="flow-box flow-before"><small>Avant</small><b>25 machines équipées</b></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-box flow-after"><small>Après</small><b>57 machines équipées</b></div></div>
+          <div class="tag-list"><span>IBA</span><span>Power BI</span><span>Python</span><span>SVN</span><span>Formation</span></div>
         </article>
-        <article class="project-card reveal">
-          <div class="project-visual visual-maintenance"><div class="metric-row"><div><span>PIÈCES</span><b>↘</b><small>Consommation</small></div><div><span>LEVIER</span><b>◎</b><small>Identifié</small></div><div><span>ÉCONOMIE</span><b>100k€+</b><small>Par an (estim.)</small></div></div><div class="chart-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="visual-caption">ANALYSE DE DONNÉES · BRAINCUBE</div></div>
-          <div class="project-content"><div class="project-kicker"><span>CONSTELLIUM · ISSOIRE</span><span>03 / DATA ANALYTICS</span></div><h3>Réduire la consommation de pièces mécaniques</h3><p>Exploiter les données de production pour comprendre l’usure de pièces mécaniques et valider des hypothèses d’amélioration du procédé.</p>
-            <div class="project-detail-grid"><div><h4>Actions</h4><p>Analyses de données avec Braincube pour tester des hypothèses d’amélioration et identifier un levier de performance.</p></div><div><h4>Impact documenté</h4><p>Économie estimée à plus de 100 k€ par an (d’après mon CV).</p></div></div>
-            <div class="tag-list"><span>Braincube</span><span>Analyse de données</span><span>Usure</span><span>Amélioration continue</span></div>
+        <article class="case reveal">
+          <header class="case-head"><span class="case-num">03</span><div><p class="case-org">Constellium Issoire <span>· Alternance</span></p><h3>Réduire la consommation de pièces mécaniques</h3></div></header>
+          <div class="case-body">
+            <div><h4>Le point de départ</h4><p>Comprendre l’usure de pièces mécaniques pour en réduire la consommation.</p></div>
+            <div><h4>Ce que j’ai fait</h4><ul><li>Analyses des données de production avec Braincube</li><li>Test d’hypothèses d’amélioration du procédé</li><li>Identification d’un levier de performance</li></ul></div>
+            <div><h4>Ce que ça a donné</h4><p>Une économie estimée à plus de 100 k€ par an.</p></div>
           </div>
+          <div class="case-flow"><div class="flow-box flow-before"><small>Avant</small><b>Des hypothèses à vérifier</b></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-box flow-after"><small>Après</small><b>Un levier identifié, plus de 100 k€ par an (estimé)</b></div></div>
+          <div class="tag-list"><span>Braincube</span><span>Analyse de données</span><span>Amélioration continue</span></div>
         </article>
       </div>
       <p class="content-note"><span>ⓘ</span> Les résultats présentés sont qualitatifs ou issus des éléments de mon CV. Les détails techniques et données internes restent volontairement confidentiels.</p>
     </section>
 
     <section class="section-shell section-block skills-section" id="competences">
-      <div class="section-heading reveal"><p class="eyebrow">03 / COMPÉTENCES</p><h2>À l’aise entre le <span class="gradient-text">terrain</span> et le code.</h2><p>Une double compétence pour comprendre les besoins opérationnels et construire des outils adaptés.</p></div>
-      <div class="skills-grid">
-        <article class="skill-card reveal"><div class="skill-number">01</div><div class="skill-icon">⌘</div><h3>Data & Business Intelligence</h3><p>Transformer des données en indicateurs lisibles pour soutenir la décision.</p><div class="skill-tags"><span>Power BI</span><span>SQL</span><span>Python</span><span>ETL</span><span>Databricks</span><span>Machine Learning</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">02</div><div class="skill-icon">⤧</div><h3>Digitalisation des processus</h3><p>Concevoir des applications métiers et automatiser les tâches répétitives.</p><div class="skill-tags"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Microsoft 365</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">03</div><div class="skill-icon">⌬</div><h3>Industrie 4.0</h3><p>Collecter, superviser et valoriser les données issues des équipements industriels.</p><div class="skill-tags"><span>IBA</span><span>Braincube</span><span>Maintenance prédictive</span><span>KPI énergie</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">04</div><div class="skill-icon">↗</div><h3>Gestion de projet</h3><p>Faire le lien entre utilisateurs, équipes techniques et objectifs opérationnels.</p><div class="skill-tags"><span>Analyse du besoin</span><span>Tests</span><span>Formation</span><span>Accompagnement</span></div></article>
+      <div class="section-heading reveal"><p class="eyebrow">03 · mes compétences</p><h2>Ce que je sais faire, <span class="gradient-text">et où je l’ai appris.</span></h2><p>Des outils que j’ai réellement utilisés en entreprise, plutôt qu’une liste de logos.</p></div>
+      <div class="skills-layout">
+        <div class="toolbox reveal">
+          <h3>Mes outils, et où je m’en suis servi</h3>
+          <ul class="tool-list">
+            <li><b>Power BI</b><span>Constellium (KPI énergie), Singen (indicateurs de maintenance), Michelin (pilotage)</span></li>
+            <li><b>Power Apps, Power Automate, SharePoint</b><span>Michelin : digitalisation des demandes d’achats</span></li>
+            <li><b>Python, SQL, ETL</b><span>Constellium (scripts, flux de données) et Mastère SIGMA</span></li>
+            <li><b>Databricks, Machine Learning</b><span>Michelin (données, prévision des ventes) et Mastère SIGMA</span></li>
+            <li><b>IBA, Braincube</b><span>Constellium : collecte de données machines et analyses de procédé</span></li>
+            <li><b>Maintenance prédictive (CCM)</b><span>Issoire, puis déploiement en autonomie à Singen</span></li>
+          </ul>
+        </div>
+        <div class="strengths reveal">
+          <h3>Ce que j’apporte en plus des outils</h3>
+          <ul class="strength-list">
+            <li><b>Je connais le terrain.</b> J’ai été technicien de maintenance en usine avant de devenir ingénieur : je sais ce que vivent les équipes.</li>
+            <li><b>Je forme et j’accompagne.</b> 35 collaborateurs formés : un outil n’a de valeur que s’il est adopté.</li>
+            <li><b>Je mène un sujet de bout en bout.</b> De la collecte de la donnée à son exploitation, jusqu’à la formation des utilisateurs.</li>
+            <li><b>Je suis autonome.</b> À Singen, j’ai déployé seul une solution de maintenance prédictive, dans un environnement international.</li>
+          </ul>
+        </div>
       </div>
-      <div class="approach-strip reveal"><span class="approach-label">MA FAÇON DE TRAVAILLER</span><div><b>01</b> Comprendre le terrain</div><span class="approach-arrow">→</span><div><b>02</b> Construire simplement</div><span class="approach-arrow">→</span><div><b>03</b> Mesurer l’impact</div></div>
     </section>
 
-    <section class="contact-section" id="contact"><div class="section-shell contact-inner reveal"><div><p class="eyebrow">04 / CONTACT</p><h2>Une opportunité à me proposer ?<br><span class="gradient-text">Échangeons.</span></h2><p>Je suis à la recherche d’un poste en data, solutions digitales ou transformation industrielle. N’hésitez pas à me contacter, je vous répondrai avec plaisir.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:k.faure12@gmail.com">M’écrire un message <span>↗</span></a><a class="contact-link contact-link-wide" href="https://www.linkedin.com/in/kilian-faure-b24b6834b/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a class="contact-link" href="https://github.com/KilianFAURE" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a class="contact-link" href="documents/CV_Kilian_FAURE.pdf" download>CV PDF <span>↓</span></a></div></div></section>
+    <section class="contact-section" id="contact"><div class="section-shell contact-inner reveal"><div><p class="eyebrow">04 · contact</p><h2>Une opportunité ? <span class="gradient-text">Écrivez-moi.</span></h2><p>Je cherche un poste en data, solutions digitales ou transformation industrielle. Un message suffit, je réponds volontiers.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:k.faure12@gmail.com">M’écrire un message <span>↗</span></a><a class="contact-link contact-link-wide" href="https://www.linkedin.com/in/kilian-faure-b24b6834b/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a class="contact-link" href="https://github.com/KilianFAURE" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a class="contact-link" href="documents/CV_Kilian_FAURE.pdf" download>CV PDF <span>↓</span></a></div></div></section>
   </main>
-  <footer class="site-footer section-shell"><a class="brand footer-brand" href="#accueil"><img class="brand-mark" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="37" height="55"><span>KILIAN FAURE<span class="brand-sub">GÉNIE INDUSTRIEL × DATA</span></span></a><span>Conçu avec HTML, CSS & JavaScript.</span><a href="#accueil" class="back-top">Retour en haut ↑</a><span class="copyright">© <span id="year">2026</span> Kilian Faure</span></footer>
+  <footer class="site-footer section-shell"><a class="brand footer-brand" href="#accueil"><img class="brand-mark" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="37" height="55"><span>KILIAN FAURE<span class="brand-sub">Génie industriel × data</span></span></a><span>Site statique hébergé sur GitHub Pages.</span><a href="#accueil" class="back-top">Retour en haut ↑</a><span class="copyright">© <span id="year">2026</span> Kilian Faure</span></footer>
 </body>
 </html>

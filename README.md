@@ -9,10 +9,12 @@ Vérifier : menu, parcours (boutons, points, carte, flèches ← →), télécha
 ## Structure
 - `index.html` : contenu et structure (meta SEO, Open Graph, données structurées).
 - `css/style.css` : design, responsive, animations (la fin du fichier contient les ajustements V3).
+- `js/theme.js` : bouton mode clair / sombre (choix mémorisé) et sons (coq en clair, hibou en sombre).
+- `js/egg.js` : petit secret sur la photo d'accueil (5 clics, images `assets/avatar/tete-avatar-blesse-N.webp`).
 - `js/main.js` : menu mobile, lien de navigation actif, apparition progressive.
 - `js/journey.js` : parcours interactif (étapes, carte, avatar, navigation clavier).
 - `assets/` : images **au format WebP** (parcours, logos, avatar, carte), favicons, image de partage `og-image.jpg`.
-- `documents/CV_Kilian_Faure.pdf` : CV téléchargeable (garder exactement ce nom).
+- `documents/CV_Kilian_FAURE.pdf` : CV téléchargeable (garder exactement ce nom, avec ces majuscules).
 - `404.html`, `robots.txt`, `sitemap.xml` : pages et fichiers utiles au référencement.
 
 ## Ajouter ou remplacer une image du parcours
@@ -22,3 +24,6 @@ Vérifier : menu, parcours (boutons, points, carte, flèches ← →), télécha
 
 ## À compléter
 - Liens vers les projets GitHub / démonstrations, si possible non confidentiels.
+
+## Sons du mode clair / sombre
+`assets/sounds/coq.mp3` (mode clair) et `assets/sounds/hibou.mp3` (mode sombre) sont des sons **synthétisés**. Pour de vrais enregistrements libres de droits, remplacez simplement ces deux fichiers en gardant les mêmes noms (durée conseillée : 2 à 3 secondes).
