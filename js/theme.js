@@ -1,5 +1,5 @@
 (() => {
-  // Thème clair / sombre + sons (coq au passage en clair, hibou au passage en sombre).
+  // Thème clair (par défaut) / sombre + sons (coq au passage en clair, hibou au passage en sombre).
   // Les sons ne se jouent que lorsque la personne clique sur le bouton, jamais au chargement.
   const root = document.documentElement;
   const themeBtn = document.getElementById("theme-toggle");
@@ -19,7 +19,7 @@
   }
 
   function paintLabels() {
-    const dark = root.dataset.theme !== "light";
+    const dark = root.dataset.theme === "dark";
     themeBtn?.setAttribute("aria-label", dark ? "Passer en mode clair" : "Passer en mode sombre");
     themeBtn?.setAttribute("title", dark ? "Mode clair" : "Mode sombre");
     soundBtn?.setAttribute("aria-pressed", String(soundOn));
@@ -29,7 +29,7 @@
   }
 
   themeBtn?.addEventListener("click", () => {
-    const next = root.dataset.theme === "light" ? "dark" : "light";
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
     root.classList.add("theme-anim");
     root.dataset.theme = next;
     write("kf-theme", next);

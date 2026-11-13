@@ -6,6 +6,7 @@
   const avatar = document.querySelector('.avatar-placeholder');
   const avatarImage = document.querySelector('.avatar-image');
   const avatarFallback = document.querySelector('.avatar-fallback');
+  const mapPanel = document.querySelector('.map-panel');
   const previous = document.querySelector('.journey-prev');
   const next = document.querySelector('.journey-next');
   const progress = document.querySelector('.journey-progress');
@@ -50,6 +51,8 @@
     markers.forEach(marker => {
       const active = marker.dataset.place === place; marker.classList.toggle('is-active', active); marker.setAttribute('aria-pressed', String(active));
     });
+    // Dernière carte (« la suite ») : la bulle « Et chez vous ? » apparaît à côté de l'avatar.
+    mapPanel?.classList.toggle('is-next', card.dataset.step === 'suite');
     if (avatar && positions[place]) {
       avatar.style.left = `${positions[place].left}%`; avatar.style.top = `${positions[place].top}%`;
     }
@@ -70,10 +73,16 @@
   next?.addEventListener('click', () => activate(activeIndex + 1, true));
   // Défilement : le déclencheur le plus proche du centre de l'écran choisit la carte.
   if (triggers.length && 'IntersectionObserver' in window) {
+    const inBand = new Set(); // déclencheurs actuellement dans la bande centrale de l'écran
+    const distanceToCenter = rect => Math.abs(rect.top + rect.height / 2 - innerHeight / 2);
     const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { const step = Number(entry.target.dataset.scrollStep); if (entry.isIntersecting) inBand.add(step); else inBand.delete(step); });
       if (isScrollActivating) return;
-      const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => Math.abs(a.boundingClientRect.top + a.boundingClientRect.height / 2 - innerHeight / 2) - Math.abs(b.boundingClientRect.top + b.boundingClientRect.height / 2 - innerHeight / 2));
-      if (visible[0]) activate(Number(visible[0].target.dataset.scrollStep));
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => distanceToCenter(a.boundingClientRect) - distanceToCenter(b.boundingClientRect));
+      if (visible[0]) { activate(Number(visible[0].target.dataset.scrollStep)); return; }
+      // Aucun déclencheur ne vient d'entrer : si l'étape affichée a quitté la bande (petit aller-retour de défilement),
+      // on se recale sur celle qui s'y trouve encore. Sans cela, la dernière carte pouvait ne jamais s'afficher.
+      if (inBand.size && !inBand.has(activeIndex)) activate([...inBand].sort((a, b) => distanceToCenter(triggers[a].getBoundingClientRect()) - distanceToCenter(triggers[b].getBoundingClientRect()))[0]);
     }, { rootMargin: '-38% 0px -38% 0px', threshold: 0 });
     triggers.forEach(trigger => observer.observe(trigger));
   }

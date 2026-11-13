@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0B1220">
-  <meta name="color-scheme" content="dark light">
-  <script>try{var t=localStorage.getItem("kf-theme");document.documentElement.dataset.theme=(t==="light"||t==="dark")?t:"light"}catch(e){document.documentElement.dataset.theme="dark"}</script>
+  <meta name="theme-color" content="#eef4f7">
+  <meta name="color-scheme" content="light dark">
+  <script>/* Thème clair par défaut ; le sombre ne s'applique que si la personne l'a choisi avec le bouton. */try{if(localStorage.getItem("kf-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
   <meta name="description" content="Portfolio de Kilian Faure, ingénieur en génie industriel et diplômé d’un Mastère Spécialisé en science des données. Projets data, BI et transformation digitale industrielle.">
   <meta name="author" content="Kilian Faure">
   <link rel="canonical" href="https://kilianfaure.github.io/">
@@ -49,7 +49,7 @@
     </nav>
     <div class="header-tools">
       <button class="tool-btn" id="sound-toggle" type="button" aria-pressed="true" aria-label="Couper le son"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z" fill="currentColor"/><path class="waves" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="slash" d="M4 4l16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-      <button class="tool-btn" id="theme-toggle" type="button" aria-label="Passer en mode clair"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="currentColor"/></svg></button>
+      <button class="tool-btn" id="theme-toggle" type="button" aria-label="Passer en mode sombre"><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="currentColor"/></svg></button>
     </div>
   </header>
 
@@ -105,7 +105,7 @@
               <g class="map-marker" data-place="issoire" transform="translate(730 738)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="-20" y="32" text-anchor="end">ISSOIRE</text></g>
               <g class="map-marker" data-place="singen" transform="translate(1320 400)"><circle r="23" class="marker-halo"/><circle r="9" class="marker-core"/><text x="20" y="-15">SINGEN</text><text x="20" y="10" class="map-country">ALLEMAGNE</text></g>
             </svg>
-            <div class="avatar-placeholder" aria-hidden="true"><img class="avatar-image" src="assets/avatar/corps-avatar.webp" alt="" width="78" height="139" hidden><img class="avatar-fallback" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="78" height="117"></div>
+            <div class="avatar-placeholder" aria-hidden="true"><span class="avatar-bubble">Et chez vous ?</span><img class="avatar-image" src="assets/avatar/corps-avatar.webp" alt="" width="78" height="139" hidden><img class="avatar-fallback" src="assets/avatar/tete-avatar-kilian.webp" alt="" width="78" height="117"></div>
           </div>
           <div class="map-legend"><span><i class="legend-blue"></i> International</span><span><i class="legend-green"></i> Industrie & digital</span></div>
           <p class="map-hint">Sélectionnez une étape pour suivre le parcours.</p>
@@ -114,7 +114,7 @@
         <div class="journey-detail">
           <div class="timeline" aria-label="Étape sélectionnée du parcours professionnel">
             <article class="timeline-card reveal is-active" data-step="origines" data-place="clermont" aria-hidden="false">
-              <div class="timeline-top"><span class="timeline-index">01 / 08</span><span class="timeline-date">2002 — 2020</span></div>
+              <div class="timeline-top"><span class="timeline-index">01 / 09</span><span class="timeline-date">2002 — 2020</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 1">
                 <img src="assets/images/parcours/etape-01.webp" alt="Illustration : Une enfance au cœur des volcans d'Auvergne" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 01</figcaption>
@@ -125,7 +125,7 @@
               <div class="tag-list"><span>Auvergne</span><span>Sciences</span><span>Sciences de l'Ingénieur</span></div>
             </article>
             <article class="timeline-card" data-step="dut" data-place="clermont" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">02 / 08</span><span class="timeline-date">2020 — 2022</span></div>
+              <div class="timeline-top"><span class="timeline-index">02 / 09</span><span class="timeline-date">2020 — 2022</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 2">
                 <img src="assets/images/parcours/etape-02.webp" alt="Illustration : DUT Génie Industriel et Maintenance" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 02</figcaption>
@@ -136,7 +136,7 @@
               <div class="tag-list"><span>Électricité</span><span>Mécanique</span><span>Automatisme</span><span>Robotique</span><span>Maintenance</span></div>
             </article>
             <article class="timeline-card" data-step="rians" data-place="rians" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">03 / 08</span><span class="timeline-date">SEPT. 2021 — AOÛT 2022</span></div>
+              <div class="timeline-top"><span class="timeline-index">03 / 09</span><span class="timeline-date">SEPT. 2021 — AOÛT 2022</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 3">
                 <img src="assets/images/parcours/etape-03.webp" alt="Illustration : Triballat : ma première expérience industrielle" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 03</figcaption>
@@ -147,7 +147,7 @@
               <div class="tag-list"><span>Maintenance préventive</span><span>Maintenance corrective</span><span>Diagnostic de panne</span><span>Soudure MIG</span><span>Agroalimentaire</span></div>
             </article>
             <article class="timeline-card" data-step="ingenieur" data-place="saint-etienne" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">04 / 08</span><span class="timeline-date">2022 — 2025</span></div>
+              <div class="timeline-top"><span class="timeline-index">04 / 09</span><span class="timeline-date">2022 — 2025</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 4">
                 <img src="assets/images/parcours/etape-04.webp" alt="Illustration : Diplôme d'Ingénieur en Génie Industriel" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 04</figcaption>
@@ -158,7 +158,7 @@
               <div class="tag-list"><span>Génie industriel</span><span>Lean Manufacturing</span><span>Supply Chain</span><span>Gestion de projet</span></div>
             </article>
             <article class="timeline-card" data-step="issoire" data-place="issoire" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">05 / 08</span><span class="timeline-date">SEPT. 2022 — SEPT. 2025</span></div>
+              <div class="timeline-top"><span class="timeline-index">05 / 09</span><span class="timeline-date">SEPT. 2022 — SEPT. 2025</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 5">
                 <img src="assets/images/parcours/etape-05.webp" alt="Illustration : Ingénieur Transformation Digitale Industrielle" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 05</figcaption>
@@ -169,7 +169,7 @@
               <div class="tag-list"><span>IBA</span><span>Power BI</span><span>Braincube</span><span>Maintenance prédictive</span><span>ETL</span><span>Formation</span></div>
             </article>
             <article class="timeline-card" data-step="singen" data-place="singen" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">06 / 08</span><span class="timeline-date">JUIN — AOÛT 2025</span></div>
+              <div class="timeline-top"><span class="timeline-index">06 / 09</span><span class="timeline-date">JUIN — AOÛT 2025</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 6">
                 <img src="assets/images/parcours/etape-06.webp" alt="Illustration : Data Analyste, stage international en Allemagne" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 06</figcaption>
@@ -180,7 +180,7 @@
               <div class="tag-list"><span>Power BI</span><span>MTBF / MTTR</span><span>Maintenance prédictive (CCM)</span><span>International</span></div>
             </article>
             <article class="timeline-card" data-step="sigma" data-place="clermont" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">07 / 08</span><span class="timeline-date">2025 — 2026</span></div>
+              <div class="timeline-top"><span class="timeline-index">07 / 09</span><span class="timeline-date">2025 — 2026</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 7">
                 <img src="assets/images/parcours/etape-07.webp" alt="Illustration : Mastère Spécialisé Expert en Science des Données" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 07</figcaption>
@@ -191,7 +191,7 @@
               <div class="tag-list"><span>Statistiques</span><span>Machine Learning</span><span>Deep Learning</span><span>Python</span><span>PostgreSQL</span><span>Data Engineering</span></div>
             </article>
             <article class="timeline-card" data-step="michelin" data-place="clermont" aria-hidden="true" hidden>
-              <div class="timeline-top"><span class="timeline-index">08 / 08</span><span class="timeline-date">OCT. 2025 — SEPT. 2026</span></div>
+              <div class="timeline-top"><span class="timeline-index">08 / 09</span><span class="timeline-date">OCT. 2025 — SEPT. 2026</span></div>
               <figure class="timeline-stamp" aria-label="Illustration de l’étape 8">
                 <img src="assets/images/parcours/etape-08.webp" alt="Illustration : Michelin Motorsport : Ingénieur Solutions Digitales" width="104" height="130" decoding="async" onerror="this.classList.add('is-missing')">
                 <figcaption>ÉTAPE 08</figcaption>
@@ -200,6 +200,18 @@
               <p>J'ai contribué à des projets de transformation digitale visant à améliorer l'efficacité opérationnelle et la valorisation des données. Mon principal projet : digitaliser le processus des Demandes d'Achats Électroniques (DAE), jusque-là basé sur Excel, macros et échanges d'e-mails, avec une solution intégrée Power Platform (Power Apps, Power Automate, SharePoint, Power BI).</p><p>J'ai aussi travaillé sur des traitements de données avec Databricks, des tableaux de bord décisionnels, une étude de prévision des ventes de pneumatiques historiques par Machine Learning, et accompagné les utilisateurs dans la conduite du changement.</p>
               <p class="timeline-why"><b>Pourquoi cette étape</b>Réunir les deux versants de mon parcours, le terrain industriel et la data, sur des processus métiers réels et dans un environnement exigeant en performance.</p>
               <div class="tag-list"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Power BI</span><span>Databricks</span><span>Machine Learning</span></div>
+            </article>
+            <article class="timeline-card timeline-card-next" data-step="suite" data-place="clermont" aria-hidden="true" hidden>
+              <div class="timeline-top"><span class="timeline-index">09 / 09</span><span class="timeline-date">PROCHAINE ÉTAPE</span></div>
+              <figure class="timeline-stamp timeline-stamp-next" aria-hidden="true">
+                <span class="stamp-mark">?</span>
+                <figcaption>ÉTAPE 09</figcaption>
+              </figure>
+              <div class="timeline-company"><span class="company-symbol company-logo next-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V10l5.5 3.5V10l5.5 3.5V4.5h4.5V20"/><path d="M2 20h20M6.5 16.5h2M11.5 16.5h2M16.2 8h.01M16.2 11.5h.01M16.2 15h.01"/></svg></span><div><h3>La suite ? Peut-être avec votre entreprise</h3><p>Disponible · Data, solutions digitales, transformation industrielle</p></div></div>
+              <p>Cette étape reste à écrire. Je cherche un poste en data, solutions digitales ou transformation industrielle, au contact des équipes de terrain.</p><p>Des machines dont les données ne sont pas encore exploitées, un processus qui repose sur Excel et des e-mails, des équipes à former à un nouvel outil : ce sont les sujets sur lesquels j’ai travaillé chez Constellium et chez Michelin Motorsport.</p>
+              <p class="timeline-why"><b>Pourquoi pas chez vous</b>Si l’un de ces sujets existe dans votre entreprise, parlons-en. Un message suffit, je réponds volontiers.</p>
+              <div class="tag-list"><span>Data</span><span>Solutions digitales</span><span>Transformation industrielle</span><span>Disponible</span></div>
+              <div class="timeline-cta"><a class="button button-primary" href="#contact">Me contacter <span aria-hidden="true">↗</span></a></div>
             </article>
           </div>
           <div class="journey-controls" aria-label="Navigation dans le parcours">
@@ -219,6 +231,7 @@
         <div class="journey-scroll-trigger" data-scroll-step="5"></div>
         <div class="journey-scroll-trigger" data-scroll-step="6"></div>
         <div class="journey-scroll-trigger" data-scroll-step="7"></div>
+        <div class="journey-scroll-trigger" data-scroll-step="8"></div>
       </div>
     </section>
 
